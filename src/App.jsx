@@ -53,7 +53,7 @@ function App() {
           <div style={buttonGroupStyle}>
             <a
               style={primaryButtonStyle}
-              href="/StitipurnaParija_2026.pdf"
+              href="/Stitipurna_Parija_2026.pdf"
               target="_blank"
               rel="noreferrer"
             >
