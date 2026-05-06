@@ -1,12 +1,24 @@
 import profileImg from './assets/profile.jpg';
 
 function App() {
-  const skills = ["ABAP", "OO ABAP",  "ODATA V2/V4", "SAP UI5", "FIORI", "CDS" , "AMDP" , "RAP", "ENHANCEMENTS" , "SMARTFORMS" , "TDD", "BOPF"];
+  const skills = [
+    "ABAP",
+    "OO ABAP",
+    "ODATA V2/V4",
+    "SAP UI5",
+    "FIORI",
+    "CDS",
+    "AMDP",
+    "RAP",
+    "ENHANCEMENTS",
+    "SMARTFORMS",
+    "TDD",
+    "BOPF"
+  ];
 
   return (
     <div style={pageStyle}>
       <nav style={navStyle}>
-        <div></div>
         <div style={navLinksStyle}>
           <a style={navLinkStyle} href="#about">About</a>
           <a style={navLinkStyle} href="#experience">Experience</a>
@@ -16,39 +28,68 @@ function App() {
       </nav>
 
       <section style={heroCardStyle}>
-        <img src={profileImg} alt="Stitipurna Parija" style={profileImageStyle} />
+        <img
+          src={profileImg}
+          alt="Stitipurna Parija"
+          style={profileImageStyle}
+        />
 
         <div style={heroContentStyle}>
-          <h1 style={heroTitleStyle}>Stitipurna Parija</h1>
           <div style={tagStyle}>SAP Full Stack Product Developer</div>
-          <p style={heroTextStyle}>ABAP on HANA | SAP UI5 | OData | RAP</p>
+
+          <h1 style={heroTitleStyle}>
+            Stitipurna Parija
+          </h1>
+
+          <p style={heroTextStyle}>
+            ABAP on HANA | SAP UI5 | OData | RAP
+          </p>
+
           <p style={heroDescStyle}>
-            I build end-to-end SAP applications, from backend ABAP logic and OData services
-            to modern SAP UI5 dashboards used by business teams.
+            I build end-to-end SAP applications, from backend ABAP logic and
+            OData services to modern SAP UI5 dashboards used by business teams.
           </p>
 
           <div style={buttonGroupStyle}>
-            <a style={primaryButtonStyle} href="#projects">View Projects</a>
-            <a style={secondaryButtonStyle} href="#contact">Contact Me</a>
+            <a
+              style={primaryButtonStyle}
+              href="/StitipurnaParija_2026.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download Resume
+            </a>
+            <a style={primaryButtonStyle} href="#projects">
+              View Projects
+            </a>
+
+            <a style={primaryButtonStyle} href="#contact">
+              Contact Me
+            </a>
           </div>
         </div>
       </section>
 
       <section id="about" style={sectionStyle}>
         <h2 style={sectionTitleStyle}>About Me</h2>
+
         <p style={paragraphStyle}>
-          SAP Full Stack Product Developer with experience in ABAP, OO ABAP, CDS views,
-          RAP, OData, and SAP UI5. Skilled in building end-to-end applications, from
-          backend business logic to intuitive frontend dashboards, with a focus on
-          performance, scalability, and user experience.
+          SAP Full Stack Product Developer with experience in ABAP, OO ABAP,
+          CDS views, RAP, OData, and SAP UI5. Skilled in building end-to-end
+          applications, from backend business logic to intuitive frontend
+          dashboards, with a focus on performance, scalability, and user
+          experience.
         </p>
       </section>
 
       <section style={sectionStyle}>
         <h2 style={sectionTitleStyle}>Skills</h2>
+
         <div style={skillsGridStyle}>
-          {skills.map(skill => (
-            <span key={skill} style={skillStyle}>{skill}</span>
+          {skills.map((skill) => (
+            <span key={skill} style={skillStyle}>
+              {skill}
+            </span>
           ))}
         </div>
       </section>
@@ -58,21 +99,43 @@ function App() {
 
         <div style={experienceGridStyle}>
           <div style={experienceCardStyle}>
-            <h3 style={cardTitleStyle}>IBM India Pvt Ltd. (October, 2024 - Present)</h3>
-            <p style={roleStyle}>ABAP on HANA / SAP UI5 Developer</p>
-            <p style={cardTextStyle}>
-              Developing SAP UI5 applications connected to ECC through OData services.
+            <h3 style={cardTitleStyle}>
+              IBM India Pvt Ltd. (October, 2024 - Present)
+            </h3>
+
+            <p style={roleStyle}>
+              ABAP on HANA / SAP UI5 Developer
             </p>
-            <h4 style={cardSubTitleStyle}>Client Engagement - MBRDI</h4>
+
+            <p style={cardTextStyle}>
+                Working on SAP UI5, ABAP on HANA, OData services, reports, RFCs,
+                SmartForms, AIF interfaces, and backend enhancements for ECC-based
+                enterprise applications.
+            </p>
+
+            <h4 style={cardSubTitleStyle}>
+              Client Engagement - Mercedes-Benz Research & Development India
+            </h4>
           </div>
 
           <div style={experienceCardStyle}>
-            <h3 style={cardTitleStyle}>Tata Consultancy Services (May, 2021 - October, 2024)</h3>
-            <p style={roleStyle}>ABAP on HANA / SAP UI5 Developer</p>
-            <p style={cardTextStyle}>
-              Worked on SAP GDPR, DVS and PEO projects with ABAP, CDS, UI5 and RAP.
+            <h3 style={cardTitleStyle}>
+              Tata Consultancy Services (May, 2021 - October, 2024)
+            </h3>
+
+            <p style={roleStyle}>
+              ABAP on HANA / SAP UI5 Developer
             </p>
-            <h4 style={cardSubTitleStyle}>Client Engagement - SAP Labs</h4>
+
+            <p style={cardTextStyle}>
+              Worked on OOABAP, SAP UI5, CDS views, RAP, enhancements,
+              BOPF, TDD, FM, and backend development across SAP GDPR, DVS, and PEO
+              projects.
+            </p>
+
+            <h4 style={cardSubTitleStyle}>
+              Client Engagement - SAP Labs
+            </h4>
           </div>
         </div>
       </section>
@@ -83,34 +146,56 @@ function App() {
         <div style={cardsGridStyle}>
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>SPM ASIA & CHINA</h3>
+
             <p style={cardTextStyle}>
-              Developed a real-time SAP UI5 dashboard for warehouse operations using OData services.
-              Designed KPI tiles and interactive visualizations to monitor Pick, Loading, and PGI statuses.
-              Implemented plant-wise data representation with dynamic charts and performance metrics.
-              Integrated backend data from ECC and optimized data handling for faster UI response.
-              Enabled auto-refresh and timestamp-based updates for real-time monitoring.
+                Working as an SAP Full Stack Developer on SAP UI5, ABAP on HANA,
+                OData, and backend development. Developing responsive SAP UI5
+                applications integrated with ECC systems through OData services.
+                Working on custom reports, RFC developments, SmartForms, AIF
+                interfaces, enhancements, CDS views, and backend business logic.
+                Involved in end-to-end application development, debugging,
+                performance optimization, and integration across frontend and
+                backend SAP components.
             </p>
           </div>
 
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>SAP PEO Enhancements</h3>
+
             <p style={cardTextStyle}>
-              Implemented enhancements using OO ABAP, CDS views, and BOPF in SAP PEO environment.
-              Developed and optimized CDS views for efficient data modeling and retrieval.
-              Worked on SAP UI5 changes and backend logic integration for improved functionality.
-              Designed value help views and performed enhancements to existing standard applications.
-              Wrote ABAP Unit test cases following Test-Driven Development practices.
+              Implemented enhancements using OO ABAP, CDS views, and BOPF in
+              SAP PEO environment. Developed and optimized CDS views for
+              efficient data modeling and retrieval. Worked on SAP UI5 changes
+              and backend logic integration for improved functionality.
+              Designed value help views and performed enhancements to existing
+              standard applications. Wrote ABAP Unit test cases following
+              Test-Driven Development practices.
+            </p>
+          </div>
+          <div style={cardStyle}>
+            <h3 style={cardTitleStyle}>MBPTS Digital Cockpit</h3>
+
+            <p style={cardTextStyle}>
+              Developed a real-time SAP UI5 dashboard for warehouse operations
+              using OData services. Designed KPI tiles and interactive
+              visualizations to monitor Pick, Loading, and PGI statuses.
+              Implemented plant-wise data representation with dynamic charts and
+              performance metrics. Integrated backend data from ECC and
+              optimized data handling for faster UI response. Enabled
+              auto-refresh and timestamp-based updates for real-time monitoring.
             </p>
           </div>
 
           <div style={cardStyle}>
             <h3 style={cardTitleStyle}>RAP Applications</h3>
+
             <p style={cardTextStyle}>
-              Built end-to-end applications using RESTful ABAP Programming Model.
-              Created CDS views, behavior definitions, and service bindings for OData V4 exposure.
-              Implemented actions, determinations, and validations using EML.
-              Developed transactional applications with CRUD operations and draft handling.
-              Tested and consumed services using OData V4 APIs.
+              Built end-to-end applications using RESTful ABAP Programming
+              Model. Created CDS views, behavior definitions, and service
+              bindings for OData V4 exposure. Implemented actions,
+              determinations, and validations using EML. Developed
+              transactional applications with CRUD operations and draft
+              handling. Tested and consumed services using OData V4 APIs.
             </p>
           </div>
         </div>
@@ -118,11 +203,28 @@ function App() {
 
       <section id="contact" style={contactStyle}>
         <h2 style={sectionTitleStyle}>Let’s Connect</h2>
-        <p style={paragraphStyle}>Open to SAP full-stack opportunities and collaborations. Feel free to reach out to discuss projects, ideas, or roles.</p>
+
+        <p style={paragraphStyle}>
+          Open to SAP full-stack opportunities and collaborations. Feel free to
+          reach out to discuss projects, ideas, or roles.
+        </p>
 
         <div style={buttonGroupStyle}>
-          <a style={primaryButtonStyle} href="mailto:stitipurna.work@gmail.com">Email Me</a>
-          <a style={secondaryButtonStyle} href="#">LinkedIn</a>
+          <a
+            style={secondaryButtonStyle}
+            href="mailto:stitipurna.work@gmail.com"
+          >
+            Email Me
+          </a>
+
+          <a
+            style={primaryButtonStyle}
+            href="https://www.linkedin.com/in/stitipurna-parija-b7b09b183"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
       </section>
     </div>
@@ -141,13 +243,16 @@ const navStyle = {
   maxWidth: "1180px",
   margin: "0 auto",
   display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center"
+  justifyContent: "flex-end",
+  alignItems: "center",
+  paddingTop: "5px"
 };
 
 const navLinksStyle = {
   display: "flex",
-  gap: "24px"
+  gap: "18px",
+  flexWrap: "wrap",
+  justifyContent: "center"
 };
 
 const navLinkStyle = {
@@ -165,12 +270,15 @@ const heroCardStyle = {
   boxShadow: "0 24px 60px rgba(15, 23, 42, 0.10)",
   display: "flex",
   alignItems: "center",
-  gap: "48px"
+  justifyContent: "center",
+  gap: "48px",
+  flexWrap: "wrap",
+  overflow: "hidden"
 };
 
 const profileImageStyle = {
-  width: "180px",
-  height: "180px",
+  width: "clamp(140px, 40vw, 180px)",
+  height: "clamp(140px, 40vw, 180px)",
   borderRadius: "50%",
   objectFit: "cover",
   objectPosition: "center 18%",
@@ -181,6 +289,7 @@ const profileImageStyle = {
 
 const heroContentStyle = {
   flex: 1,
+  minWidth: "280px",
   textAlign: "center"
 };
 
@@ -195,14 +304,15 @@ const tagStyle = {
 };
 
 const heroTitleStyle = {
-  fontSize: "48px",
+  fontSize: "clamp(34px, 8vw, 48px)",
   margin: "8px 0 10px",
-  color: "#0f172a"
+  color: "#0f172a",
+  wordBreak: "break-word"
 };
 
 const heroTextStyle = {
   color: "#334155",
-  fontSize: "22px",
+  fontSize: "clamp(17px, 4vw, 22px)",
   margin: "0 0 14px"
 };
 
@@ -343,4 +453,4 @@ const contactStyle = {
   border: "1px solid #e2e8f0"
 };
 
-export default App
+export default App;

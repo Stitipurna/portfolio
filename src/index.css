@@ -2,9 +2,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: #f8fafc;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
 
 a {
